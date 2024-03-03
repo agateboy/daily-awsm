@@ -131,18 +131,18 @@ function DailyDataProcessor({ csvData }) {
   var rc = "";
   var rangeval = Math.abs(lastDayStats.difference);
   if (rangeval < 14.49) {
-    rangeavg = "kecil";
+    rangeavg = "Kecil";
     rc = "k";
   } else if (rangeval >= 14.49 && rangeval < 23.19) {
-    rangeavg = "sedang";
+    rangeavg = "Sedang";
     rc = "s";
   } else if (rangeval >= 23.19) {
-    rangeavg = "besar";
+    rangeavg = "Besar";
     rc = "b";
   }
 
   var comb = vc + oc + rc + differgence;
-
+  var ccomb = vwap + opclo + rangeavg + differgence;
   const [showSetup, setShowSetup] = useState(false);
   const handleSetupClick = () => {
     setShowSetup(true); // Set showSetup state to true when the button is clicked
@@ -178,7 +178,8 @@ function DailyDataProcessor({ csvData }) {
           </tr>
         </tbody>
       </table>
-      {/* <p id='combi'>{comb}</p> */}
+      <p className='secret' id='combi'>{comb}</p>
+      <p className='secret' id='ccomb'>{ccomb}</p>
       {showSetup && <Setup />}
       <input type='number' id='equityInput' placeholder='Input Equity'></input>
       <div>

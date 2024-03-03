@@ -14,6 +14,9 @@ th {
   border: 1px solid #ddd;
 }
 /* CSS untuk sel data tabel */
+.combi{
+  display: none;
+}
 td {
   /* padding: 8px; */
   text-align: center; /* Center the text */

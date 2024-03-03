@@ -3,6 +3,7 @@ import './App.css'; // Import CSS file for styling
 import VariableRenderer from './VariableRenderer'; // Import VariableRenderer component
 import DailyDataProcessor from './DailyDataProcessor';
 import Setup from './setup';
+import CSVReader from './wr'; // CSV reader
 function App() {
   const [csvData, setCsvData] = useState([]);
   const handleFileUpload = (event) => {
@@ -28,6 +29,7 @@ function App() {
           <div>
             <VariableRenderer csvData={csvData} />
             <DailyDataProcessor csvData={csvData} />
+            <CSVReader/>
           </div>
         ) : (
           <h2>WELCOME 2024</h2>

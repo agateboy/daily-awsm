@@ -2321,36 +2321,7 @@ function Setup() {
                                         <div>${loss}</div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td className="table-cell">
-                                        <div>Sell Stop</div>
-                                        <div>{sellstop}</div>
-                                    </td>
-                                    <td className="table-cell">
-                                        <div>Order</div>
-                                        <div>Sell</div>
-                                    </td>
-                                    <td className="table-cell">
-                                        <div>Stoploss</div>
-                                        <div>{buystop}</div>
-                                    </td>
-                                    <td className="table-cell">
-                                        <div>PIP</div>
-                                        <div>{pip}</div>
-                                    </td>
-                                    <td className="table-cell">
-                                        <div>Lot</div>
-                                        <div>{lot}</div>
-                                    </td>
-                                    <td className="table-cell">
-                                        <div>Risk</div>
-                                        <div>{riskvar}</div>
-                                    </td>
-                                    <td className="table-cell">
-                                        <div>Value</div>
-                                        <div>${loss}</div>
-                                    </td>
-                                </tr>
+
                                 <tr>
                                     <td className="table-cell">
                                         <div>a</div>
@@ -2409,6 +2380,36 @@ function Setup() {
                                     <td className="table-cell">
                                         <div>Value</div>
                                         <div>${lossb}</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="table-cell">
+                                        <div>Sell Stop</div>
+                                        <div>{sellstop}</div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div>Order</div>
+                                        <div>Sell</div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div>Stoploss</div>
+                                        <div>{buystop}</div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div>PIP</div>
+                                        <div>{pip}</div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div>Lot</div>
+                                        <div>{lot}</div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div>Risk</div>
+                                        <div>{riskvar}</div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div>Value</div>
+                                        <div>${loss}</div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -2477,36 +2478,7 @@ function Setup() {
                                         <div>${loss}</div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td className="table-cell">
-                                        <div>Sell Stop</div>
-                                        <div>{sellstop}</div>
-                                    </td>
-                                    <td className="table-cell">
-                                        <div>Order</div>
-                                        <div>Sell</div>
-                                    </td>
-                                    <td className="table-cell">
-                                        <div>Stoploss</div>
-                                        <div>{buystop}</div>
-                                    </td>
-                                    <td className="table-cell">
-                                        <div>PIP</div>
-                                        <div>{pip}</div>
-                                    </td>
-                                    <td className="table-cell">
-                                        <div>Lot</div>
-                                        <div>{lot}</div>
-                                    </td>
-                                    <td className="table-cell">
-                                        <div>Risk</div>
-                                        <div>{riskvar}</div>
-                                    </td>
-                                    <td className="table-cell">
-                                        <div>Value</div>
-                                        <div>${loss}</div>
-                                    </td>
-                                </tr>
+
                                 <tr>
                                     <td className="table-cell">
                                         <div>a</div>
@@ -2565,6 +2537,36 @@ function Setup() {
                                     <td className="table-cell">
                                         <div>Value</div>
                                         <div>${lossb}</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="table-cell">
+                                        <div>Sell Stop</div>
+                                        <div>{sellstop}</div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div>Order</div>
+                                        <div>Sell</div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div>Stoploss</div>
+                                        <div>{buystop}</div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div>PIP</div>
+                                        <div>{pip}</div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div>Lot</div>
+                                        <div>{lot}</div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div>Risk</div>
+                                        <div>{riskvar}</div>
+                                    </td>
+                                    <td className="table-cell">
+                                        <div>Value</div>
+                                        <div>${loss}</div>
                                     </td>
                                 </tr>
                             </tbody>

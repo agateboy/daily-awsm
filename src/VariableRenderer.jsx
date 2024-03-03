@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-function VariableRenderer({ csvData}) {
+function VariableRenderer({ csvData }) {
     if (!csvData || csvData.length === 0) {
         return <div>No CSV data available</div>;
     }
-// const combi = comb;
+    // const combi = comb;
     // Initialize variables to store data
     const dailyData = {}; // Object to store data for each day, including time, high, and low
 
@@ -89,20 +89,20 @@ function VariableRenderer({ csvData}) {
     var riskoption = 0;
     var riskvar = "";
     if (trend === "up") {
-        if (fibonacciLevels.level618 <= lastMinuteOpen && lastMinuteOpen <= fibonacciLevels.level236){          
+        if (fibonacciLevels.level618 <= lastMinuteOpen && lastMinuteOpen <= fibonacciLevels.level236) {
             setup = "A";
-        }else if (fibonacciLevels.level236 <= lastMinuteOpen && lastMinuteOpen <= fibonacciLevels.level0){
+        } else if (fibonacciLevels.level236 <= lastMinuteOpen && lastMinuteOpen <= fibonacciLevels.level0) {
             setup = "B";
-        }else if (fibonacciLevels.level100 <= lastMinuteOpen && lastMinuteOpen <= fibonacciLevels.level618){
+        } else if (fibonacciLevels.level100 <= lastMinuteOpen && lastMinuteOpen <= fibonacciLevels.level618) {
             setup = "C";
         }
     }
     if (trend === "down") {
-        if (fibonacciLevels.level618 >= lastMinuteOpen && lastMinuteOpen >= fibonacciLevels.level236){          
+        if (fibonacciLevels.level618 >= lastMinuteOpen && lastMinuteOpen >= fibonacciLevels.level236) {
             setup = "A";
-        }else if (fibonacciLevels.level236 >= lastMinuteOpen && lastMinuteOpen >= fibonacciLevels.level0){
+        } else if (fibonacciLevels.level236 >= lastMinuteOpen && lastMinuteOpen >= fibonacciLevels.level0) {
             setup = "B";
-        }else if (fibonacciLevels.level100 >= lastMinuteOpen && lastMinuteOpen >= fibonacciLevels.level618){
+        } else if (fibonacciLevels.level100 >= lastMinuteOpen && lastMinuteOpen >= fibonacciLevels.level618) {
             setup = "C";
         }
     }
