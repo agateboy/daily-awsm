@@ -9,7 +9,7 @@ function CSVReader() {
     var comb = setup + ccomb;
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('blob/main/src/assets/wr.csv');
+            const response = await fetch('assets/wr.csv');
             const reader = response.body.getReader();
             const result = await reader.read();
             const decoder = new TextDecoder('utf-8');
