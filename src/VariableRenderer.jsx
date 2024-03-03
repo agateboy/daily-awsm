@@ -57,6 +57,26 @@ function VariableRenderer({ csvData }) {
     console.log('Daily Lows:', dailyLows);
 
     // Determine whether to start Fibonacci levels from the lowest or highest daily value
+    // const lastDate = Object.keys(dailyHighs).pop();
+    // const highestTime = dailyHighs[lastDate].time.split(':').map(Number);
+    // const lowestTime = dailyLows[lastDate].time.split(':').map(Number);
+    // const highestMinutes = highestTime[0] * 60 + highestTime[1];
+    // const lowestMinutes = lowestTime[0] * 60 + lowestTime[1];
+    // const startFromLowest = highestMinutes < lowestMinutes;
+
+    // // Calculate range (high - low) for the last day
+    // const range = dailyHighs[lastDate].value - dailyLows[lastDate].value;
+
+    // // Calculate Fibonacci retracement levels based on the range and the starting point
+    // const startValue = startFromLowest ? dailyLows[lastDate].value : dailyHighs[lastDate].value;
+    // const fibonacciLevels = {
+    //     level0: startValue,
+    //     level236: startValue + (range * 0.236),
+    //     level382: startValue + (range * 0.382),
+    //     level50: startValue + (range * 0.5),
+    //     level618: startValue + (range * 0.618),
+    //     level100: startFromLowest ? dailyHighs[lastDate].value : dailyLows[lastDate].value,
+    // };
     const lastDate = Object.keys(dailyHighs).pop();
     const highestTime = dailyHighs[lastDate].time.split(':').map(Number);
     const lowestTime = dailyLows[lastDate].time.split(':').map(Number);
@@ -69,15 +89,17 @@ function VariableRenderer({ csvData }) {
 
     // Calculate Fibonacci retracement levels based on the range and the starting point
     const startValue = startFromLowest ? dailyLows[lastDate].value : dailyHighs[lastDate].value;
+    const directionFactor = startFromLowest ? 1 : -1; // Direction factor for adjusting levels
     const fibonacciLevels = {
         level0: startValue,
-        level236: startValue + (range * 0.236),
-        level382: startValue + (range * 0.382),
-        level50: startValue + (range * 0.5),
-        level618: startValue + (range * 0.618),
+        level236: startValue + (directionFactor * range * 0.236),
+        level382: startValue + (directionFactor * range * 0.382),
+        level50: startValue + (directionFactor * range * 0.5),
+        level618: startValue + (directionFactor * range * 0.618),
         level100: startFromLowest ? dailyHighs[lastDate].value : dailyLows[lastDate].value,
     };
 
+    console.log(startValue);
     console.log('Fibonacci Levels:', fibonacciLevels);
     var trend = startFromLowest ? "down" : "up";
     var lastDayData = dailyData[lastDate];
