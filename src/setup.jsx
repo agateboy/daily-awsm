@@ -21,9 +21,9 @@ function Setup() {
     console.log('Trend Line:', trend);
     console.log('Entry:', setup);
     console.log('Combination:', comb);
-    var keypip = 1.63;
+    var keypip = 1.57;
     var spread = 0.3;
-    var ts = 4.22;
+    var ts = 4.06;
     var buystop = 0;
     var sellstop = 0;
     var a = 0;
@@ -33,6 +33,7 @@ function Setup() {
     var checkab = true;
     var invers = false;
     var trade = true;
+    var slab = 0;
     if (trend === "up") {
         if (setup === "A") {
             buystop = fibo50 + keypip + spread;
@@ -425,7 +426,7 @@ function Setup() {
                 riskvar = "1.5%";
             }
         } else if (setup === "B") {
-            buystop = fibo0 + keypip + spread;
+            buystop = parseFloat(fibo0 + keypip + spread).toFixed(2);
             sellstop = fibo23 - keypip;
             a = parseFloat((fibo0 + fibo23) / 2 - keypip).toFixed(2);
             b = parseFloat(fibo0 - keypip).toFixed(2);
@@ -2164,12 +2165,43 @@ function Setup() {
     console.log({ pip }, { loss }, { lot });
 
     //HITUNG BUYSELL A
-    var pipa = parseFloat((a - sellstop) * 100).toFixed(0);
+    if (trend === "up") {
+        if (setup === "C") {
+            if (!invers) {
+                slab = sellstop;
+            } else {
+                slab = buystop;
+            }
+        } else if (setup === "B") {
+            if (!invers) {
+                slab = buystop;
+            } else {
+                slab = sellstop;
+            }
+        }
+    } else {
+        if (setup === "C") {
+            if (!invers) {
+                slab = buystop;
+            } else {
+                slab = sellstop;
+            }
+        } else if (setup === "B") {
+            if (!invers) {
+                slab = sellstop;
+            } else {
+                slab = buystop;
+            }
+        }
+    }
+    var pipa = parseFloat((a - slab) * 100).toFixed(0);
+    pipa = Math.abs(pipa);
     var lossa = equity * riskoption / 100;
     var lota = parseFloat(lossa / pipa).toFixed(2);
 
     //HITUNG BUYSELL B
-    var pipb = parseFloat((b - sellstop) * 100).toFixed(0);
+    var pipb = parseFloat((b - slab) * 100).toFixed(0);
+    pipb = Math.abs(pipb);
     var lossb = equity * riskoption / 100;
     var lotb = parseFloat(lossb / pipb).toFixed(2);
 
