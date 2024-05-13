@@ -21,9 +21,9 @@ function Setup() {
     console.log('Trend Line:', trend);
     console.log('Entry:', setup);
     console.log('Combination:', comb);
-    var keypip = 1.57;
-    var spread = 0.3;
-    var ts = 4.06;
+    var keypip = 2.12;
+    var spread = 0.5;
+    var ts = 5.48;
     var buystop = 0;
     var sellstop = 0;
     var a = 0;
