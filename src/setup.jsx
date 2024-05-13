@@ -28,6 +28,7 @@ function Setup() {
     var sellstop = 0;
     var a = 0;
     var b = 0;
+    #asd
     var riskoption = 1;
     var riskvar = "1%";
     var checkab = true;
